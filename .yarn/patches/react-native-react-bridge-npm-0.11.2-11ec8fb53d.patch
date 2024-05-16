@@ -1,0 +1,14 @@
+diff --git a/lib/plugin/index.js b/lib/plugin/index.js
+index 039e067911d45ca3d217dcb641c34adaf6cdafd1..a880260d71bdce2d955ab80534243200017b136b 100644
+--- a/lib/plugin/index.js
++++ b/lib/plugin/index.js
+@@ -85,7 +85,8 @@ const bundle = async (filename) => {
+
+ const ROOT_ID = "root";
+
+-const createContent = (js) => {
++const createContent = (js) => {
++  js = js.replace('return`\\`${n}\\``', 'return')
+   js = js.replace(/([`$])/g, '\\$1');
+   return "export default String.raw`\n"+wrapByHtml(js)+"\n`.replace(/\\\\([`$])/g, '\\$1')";
+ };

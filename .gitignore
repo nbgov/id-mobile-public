@@ -1,0 +1,29 @@
+# editors
+.idea/
+*.iml
+
+# node
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/patches/
+node_modules/
+
+# android
+/android/app/build/
+.gradle/
+.cxx/
+
+# ios
+.DS_Store
+/ios/build/
+/ios/Pods/
+/ios/DerivedData/
+/ios/*.xcworkspace/
+.xcode.env.local
+
+# keys
+/keys/
+
+# fastlane
+/out/

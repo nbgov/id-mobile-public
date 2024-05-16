@@ -1,0 +1,25 @@
+diff --git a/lib/plugin/index.js b/lib/plugin/index.js
+index 9b2a53a7d409c752c57accae1b17986d2b681945..191cf527994dbce3a637dee4507b38418c3e1a87 100644
+--- a/lib/plugin/index.js
++++ b/lib/plugin/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var metroTransformer = require('metro-react-native-babel-transformer');
++var metroTransformer = require('@react-native/metro-babel-transformer');
+ var core = require('@babel/core');
+ var traverse = require('@babel/traverse');
+ var Metro = require('metro');
+diff --git a/lib/plugin/transformer.js b/lib/plugin/transformer.js
+index dbaf6babd3a31bf5826d0e31379b97d157ad305f..1f2e25d3b7ea06114c79a9d326fa3201e228d9e6 100644
+--- a/lib/plugin/transformer.js
++++ b/lib/plugin/transformer.js
+@@ -3,7 +3,7 @@
+ const path = require("path");
+ const fs = require("fs");
+ const { TextEncoder } = require("util");
+-const metroTransformer = require("metro-react-native-babel-transformer");
++const metroTransformer = require("@react-native/metro-babel-transformer");
+ 
+ let metroOptions = {};
+ try {
